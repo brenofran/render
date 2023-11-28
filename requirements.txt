@@ -1,2 +1,3 @@
-pip install webbrowser
-pip install os
+webbrowser==23.1.2
+os==23.1.2
+gunicorn==21.2.0
