@@ -1,7 +1,10 @@
-import webbrowser
+from flask import Flask, render_template
 
-arquivo_html = 'prova.html'
-caminho_completo = f'https://raw.githubusercontent.com/brenofran/render/main/{arquivo_html}'
+app = Flask(__name__)
 
-# Abre o arquivo HTML no navegador padrão
-webbrowser.open('file://' + caminho_completo, new=2)
+@app.route('/')
+def index():
+    return render_template('prova.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
